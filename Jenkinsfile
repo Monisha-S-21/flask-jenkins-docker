@@ -24,14 +24,14 @@ pipeline {
             }
         }
 
-        // stage('Clean Up') {
-        //     steps {
-        //         script {
-        //             bat 'docker stop flask-container || exit 0'
-        //             bat 'docker rm flask-container || exit 0'
-        //             bat 'docker rmi flask-app || exit 0'
-        //         }
-        //     }
-        // }
+        stage('Clean Up') {
+            steps {
+                script {
+                    bat 'docker stop flask-container || exit 0'
+                    bat 'docker rm flask-container || exit 0'
+                    bat 'docker rmi flask-app || exit 0'
+                }
+            }
+        }
     }
 }
